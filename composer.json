@@ -8,5 +8,10 @@
             "email": "josh@kaiju.net"
         }
     ],
-    "require": {}
+    "require": {},
+    "require-dev": {
+        "consolidation/robo": "^1.0",
+        "pear/archive_tar": "^1.4",
+        "phpunit/phpunit": "^5.7"
+    }
 }
