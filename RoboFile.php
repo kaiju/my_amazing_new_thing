@@ -9,7 +9,6 @@ class RoboFile extends \Robo\Tasks
     // define public methods as commands
     public function build()
     {
-
         $this->say("Build :)");
 
         $collection = $this->collectionBuilder();
@@ -29,9 +28,7 @@ class RoboFile extends \Robo\Tasks
             ->taskPack(__DIR__ . '/build/package.tar.gz')
                 ->addDir('my_thing', $temp_dir);
 
-        $collection->run();
-
-        $this->say("Build done.");
+        return $collection->run();
     }
 
 }
