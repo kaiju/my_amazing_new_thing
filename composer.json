@@ -1,0 +1,12 @@
+{
+    "name": "kaiju/my_amazing_new_thing",
+    "description": "My Amazing New Thing",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Josh",
+            "email": "josh@kaiju.net"
+        }
+    ],
+    "require": {}
+}
