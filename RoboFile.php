@@ -10,5 +10,25 @@ class RoboFile extends \Robo\Tasks
     public function build()
     {
         $this->say("Build :)");
+
+        $collection = $this->collectionBuilder();
+
+        $temp_dir = $collection->tmpDir();
+
+        $collection
+            ->taskPHPUnit()
+            ->taskRsync()
+                ->fromPath([
+                    __DIR__ . '/app'
+                    ])
+                ->toPath($temp_dir)
+                ->recursive()
+            ->taskFilesystemStack()
+                ->mkdir(__DIR__ . '/build')
+            ->taskPack(__DIR__ . '/build/package.tar.gz')
+                ->addDir('my_thing', $temp_dir);
+
+        return $collection->run();
     }
+
 }

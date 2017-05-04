@@ -13,5 +13,10 @@
         "consolidation/robo": "^1.0",
         "pear/archive_tar": "^1.4",
         "phpunit/phpunit": "^5.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "kaiju\\": "app/"
+        }
     }
 }
