@@ -17,6 +17,7 @@ class RoboFile extends \Robo\Tasks
         $temp_dir = $collection->tmpDir();
 
         $collection
+            ->taskPHPUnit()
             ->taskRsync()
                 ->fromPath([
                     __DIR__ . '/app'
@@ -31,6 +32,6 @@ class RoboFile extends \Robo\Tasks
         $collection->run();
 
         $this->say("Build done.");
-
     }
+
 }
