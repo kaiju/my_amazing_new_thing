@@ -8,6 +8,6 @@ class MyAmazingProgram
     }
 
     public function dont_do_the_thing() {
-        return true; // this will break the build
+        return false;
     }
 }
